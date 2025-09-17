@@ -1,0 +1,72 @@
+/* Fuente limpia y colores suaves */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #333;
+}
+
+header {
+  padding: 2rem 1rem;
+  background: #3f72af;
+  color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Contenedor de botones */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Estilo de botones */
+.region-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #f9f9f9;
+  border-radius: 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+/* Hover animado */
+.region-btn:hover {
+  background: #3f72af;
+  color: white;
+  border: 2px solid #2c4d77;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #3f72af;
+  color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-size: 0.9rem;
+}
