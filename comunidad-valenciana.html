@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Comunidad Valenciana - Página informativa</title>
+  <style>
+    /* Reset sencillo */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* Tema oscuro con texto blanco */
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#08121a 0%, #0b2b2f 100%);
+      color: #ffffff;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Encabezado con colores de la bandera valenciana */
+        /* HEADER reducido */
+    header {
+      padding: 10px 16px;
+      background: linear-gradient(90deg, #e2001a 0%, #ffd400 40%, #003366 100%);
+      color: #fff;
+    }
+    header h1 { font-size: 1.3rem; }
+    header p { font-size: 0.85rem; margin-top: 4px; }
+
+    nav {
+      margin-top: 10px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      background: rgba(255,255,255,0.06);
+      padding: 6px 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    main {
+      padding: 20px;
+      flex: 1 0 auto;
+      max-width: 1000px;
+      margin: 20px auto;
+      width: calc(100% - 40px);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .hero .intro {
+      padding: 16px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 8px;
+    }
+    .hero img {
+      width: 100%;
+      max-width: 320px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      background: linear-gradient(135deg,#a2d9ff,#ffd1a9);
+    }
+
+    section.card {
+      margin-bottom: 14px;
+      padding: 14px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+    section.card h2 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    ul { margin-left: 18px; }
+
+    .cities {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .city {
+      flex: 1 1 140px;
+      padding: 10px;
+      background: rgba(0,0,0,0.25);
+      border-radius: 6px;
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      padding: 8px 12px;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 6px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    footer {
+      background: rgba(0,0,0,0.4);
+      color: #ddd;
+      font-size: 0.85rem;
+      padding: 8px 12px;
+      text-align: center;
+      margin-top: auto; /* Mantiene el footer al final, pero no fijo */
+    }
+
+    /* Adaptativo */
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero img { height: 180px; }
+      nav { gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Comunidad Valenciana</h1>
+    <p>Región del este de España, conocida por su costa mediterránea, gastronomía y tradiciones.</p>
+    <nav>
+      <a href="#historia">Historia</a>
+      <a href="#ciudades">Ciudades</a>
+      <a href="#gastronomia">Gastronomía</a>
+      <a href="#playas">Playas</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="intro">
+        <h2>Bienvenido/a a la Comunidad Valenciana</h2>
+        <p>La Comunidad Valenciana comprende las provincias de Alicante, Castellón y Valencia. Es famosa por su clima mediterráneo, sus fiestas tradicionales (como las Fallas) y su variada cocina.</p>
+        <a class="btn" href="#gastronomia">Descubre la gastronomía</a>
+      </div>
+      <!-- Sustituye el src por una imagen real si la tienes -->
+      <img src="co-valenciana.jpg" alt="Paisaje de la Comunidad Valenciana">
+    </div>
+
+    <section id="historia" class="card">
+      <h2>Historia (resumen)</h2>
+      <p>La región tiene una historia milenaria: desde asentamientos íberos, paso por época romana y musulmana, hasta la integración definitiva en la Corona de Aragón. Su patrimonio cultural es rico y diverso.</p>
+    </section>
+
+    <section id="ciudades" class="card">
+      <h2>Ciudades principales</h2>
+      <div class="cities">
+        <div class="city">
+          <strong>Valencia</strong>
+          <p>Capital de la comunidad, con la Ciudad de las Artes y las Ciencias y un centro histórico vibrante.</p>
+        </div>
+        <div class="city">
+          <strong>Alicante</strong>
+          <p>Con un importante puerto, playas y castillo de Santa Bárbara.</p>
+        </div>
+        <div class="city">
+          <strong>Castellón</strong>
+          <p>Provincia con costa y un patrimonio natural destacable.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gastronomia" class="card">
+      <h2>Gastronomía</h2>
+      <ul>
+        <li>Paella: uno de los platos más conocidos originarios de la región.</li>
+        <li>Horchata de chufa y fartons: bebida típica, refrescante y muy popular en verano.</li>
+        <li>Mariscos y arroces: la costa proporciona ingredientes frescos y sabrosos.</li>
+      </ul>
+    </section>
+
+    <section id="playas" class="card">
+      <h2>Playas y turismo</h2>
+      <p>La costa valenciana ofrece playas de arena fina, calas y zonas naturales. Destacan destinos como la Albufera (paraje natural cercano a Valencia) y muchas playas premiadas por su calidad.</p>
+    </section>
+
+    <section class="card">
+      <h2>Ideas para visitar</h2>
+      <ul>
+        <li>Ver las Fallas en Valencia (marzo) o las Hogueras de Alicante (junio).</li>
+        <li>Pasear por el casco antiguo de Valencia y visitar la Lonja de la Seda.</li>
+        <li>Disfrutar de la gastronomía en restaurantes locales y arrocerías.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © Página informativa sobre la Comunidad Valenciana · Hecha con HTML y CSS
+  </footer>
+</body>
+</html>
